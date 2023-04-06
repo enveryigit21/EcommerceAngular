@@ -5,14 +5,8 @@ import { ApiComponent } from './Components/HomePage/api/api.component';
 import { CategoryComponent } from './Components/HomePage/categorys/category/category.component';
 
 const routes: Routes = [
-  {path:"/" , redirectTo:"full", component:HomeComponent ,
-  children: [
-    {path:"api", component:ApiComponent},
-    {path:"filtered", component:CategoryComponent}
-  ]
-  },
-
-
+  { path: '', redirectTo: '/api', pathMatch: 'full' },
+  { path: 'api', component: ApiComponent }
 ];
 
 @NgModule({

@@ -18,15 +18,9 @@ export class CategoryComponent implements OnInit {
 
   ngOnInit(): void {
     this.getForm();
-    this. filterProducts();
+    this.filterProducts();
   }
 
-  getProducts(){
-    this.productService.getProducts().subscribe(res => {
-      console.log(res);
-      this.filteredProducts = res;
-    });
-  }
 
   getForm() {
     this.priceFilterForm = new FormGroup({

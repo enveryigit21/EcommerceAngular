@@ -11,10 +11,11 @@ import { ApiComponent } from './Components/HomePage/api/api.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http'
 import { TruncatePipe } from './truncate.pipe';
-import { CategoryComponent } from './Components/HomePage/categorys/category/category.component';
+
 import {MatMenuModule} from '@angular/material/menu';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CategoryComponent } from './Components/HomePage/categorys/category/category.component';
 
 @NgModule({
   declarations: [
