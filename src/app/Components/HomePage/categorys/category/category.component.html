@@ -1,14 +1,33 @@
 <form [formGroup]="priceFilterForm">
-  <div class="container mt-4"> 
+  <div class="container mt-4">
     <div class="d-flex justify-content-between align-items-center">
       <button class="btn btn-raised-button">Fiyat:</button>
       <div class="d-flex align-items-center">
-        <input id="minPrice"  formControlName="minPrice"  placeholder="En az" style="width: 60px;"> 
+        <input id="minPrice"  formControlName="minPrice"  placeholder="En az" style="width: 60px;">
         <span class="mx-1">-</span>
         <input id="maxPrice" formControlName="maxPrice"  placeholder="En çok" style="width: 60px;"> <br>
-        <button (click)="filterProducts()" class=" btn btn-raised-button">Ok</button>
+        <button  (click)="filterProducts()" class=" btn btn-raised-button">Ok</button>
       </div>
     </div>
   </div>
-  
 </form>
+
+
+<div class="container d-flex mt-4">
+  <div class="row">
+    <div class="col-sm-4" *ngFor="let product of filteredProducts">
+      <div class="card mb-3">
+        <img class="card-img-top" src="{{product.image}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{product.title | truncate:15  }}</h5>
+          <p class="card-text">{{product.description | truncate:29}}</p>
+          <div class="d-flex justify-content-between">
+            <span style="color: red;">{{product.price | currency:'USD':true:'1.2-2'}}</span>
+            <button style="background-color: transparent;
+            border: none;" class=" rounded-full w-9 h-9" ><mat-icon  class="mat-icon">add_shopping_cart</mat-icon></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

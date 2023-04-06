@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 
 import {MatIconModule} from '@angular/material/icon';
 import { HeaderComponent } from './Components/header/header.component';
-import { CardComponent } from './Components/card/card.component';
 import { HomeComponent } from './Components/HomePage/home/home.component';
 import { ApiComponent } from './Components/HomePage/api/api.component';
 
@@ -16,11 +15,11 @@ import { CategoryComponent } from './Components/HomePage/categorys/category/cate
 import {MatMenuModule} from '@angular/material/menu';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    CardComponent,
     HomeComponent,
     ApiComponent,
     TruncatePipe,

@@ -10,7 +10,7 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./category.component.css']
 })
 export class CategoryComponent implements OnInit {
-  
+
   priceFilterForm!: FormGroup;
   filteredProducts: any = [];
   @Output() filteredProductsEvent: EventEmitter<any> = new EventEmitter();
@@ -18,7 +18,7 @@ export class CategoryComponent implements OnInit {
 
   ngOnInit(): void {
     this.getForm();
-    this.getProducts();
+    this. filterProducts();
   }
 
   getProducts(){
@@ -38,7 +38,7 @@ export class CategoryComponent implements OnInit {
   filterProducts() {
     const minPrice = this.priceFilterForm.controls['minPrice'].value;
     const maxPrice = this.priceFilterForm.controls['maxPrice'].value;
-  
+
     this.productService.getProducts().pipe(
       map(products => {
         return products.filter(product => {
@@ -52,6 +52,6 @@ export class CategoryComponent implements OnInit {
       this.filteredProductsEvent.emit(this.filteredProducts);
     });
   }
-  
+
 
 }
