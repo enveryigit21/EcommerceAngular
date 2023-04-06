@@ -9,10 +9,10 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./category.component.css']
 })
 export class CategoryComponent implements OnInit {
-  
+
   priceFilterForm!: FormGroup;
   @Output() filteredProductsEvent = new EventEmitter<any>();
-  
+
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
@@ -37,5 +37,5 @@ export class CategoryComponent implements OnInit {
     ).subscribe(filteredProducts => {
       this.filteredProductsEvent.emit(filteredProducts);
     });
-  } 
+  }
 }

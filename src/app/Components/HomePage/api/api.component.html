@@ -1,20 +1,17 @@
 <div class="container d-flex mt-4">
   <div class="row">
-    <div class="col-sm-4" *ngFor="let product of filteredProducts">
+    <div class="col-sm-4" *ngFor="let product of filteredProducts | async">
       <div class="card mb-3">
         <img class="card-img-top" src="{{product.image}}" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">{{product.title | truncate:15  }}</h5>
+          <h5 class="card-title">{{product.title | truncate:15}}</h5>
           <p class="card-text">{{product.description | truncate:29}}</p>
           <div class="d-flex justify-content-between">
             <span style="color: red;">{{product.price | currency:'USD':true:'1.2-2'}}</span>
-            <button style="background-color: transparent;
-            border: none;" class=" rounded-full w-9 h-9" ><mat-icon  class="mat-icon">add_shopping_cart</mat-icon></button>
+            <button style="background-color: transparent; border: none;" class="rounded-full w-9 h-9"><mat-icon class="mat-icon">add_shopping_cart</mat-icon></button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
