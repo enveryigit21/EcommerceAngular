@@ -1,0 +1,11 @@
+<router-outlet></router-outlet>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let product of products">
+      <app-category [product]="product"></app-category>
+    </div>
+    <div class="col-md-9">
+      <app-api></app-api>
+    </div>
+  </div>
+</div>

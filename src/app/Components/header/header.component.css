@@ -1,0 +1,9 @@
+@media (min-width: 992px) {
+  .form-inline input {
+    width: 500px;
+  }
+}
+.mat-icon {
+color: white;
+}
+

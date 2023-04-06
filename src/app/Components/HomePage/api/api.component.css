@@ -1,0 +1,10 @@
+.card {
+
+  overflow: hidden;
+  align-items: center;
+}
+img {
+  width: 150px;
+  height: 125px;
+  padding: 1rem;
+}
